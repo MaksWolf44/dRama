@@ -13,7 +13,7 @@ parser.add_argument('--binSize',type = int,default=2, help='Bin size in degrees'
 
 args = parser.parse_args()
 print(args)
-
+#dffdf
 from fontTools.pens import statisticsPen
 import time
 from matplotlib.pyplot import plot
