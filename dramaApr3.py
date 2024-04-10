@@ -11,8 +11,8 @@ parser.add_argument('--saveDir',default='', help='The directory to witch the res
 parser.add_argument('--saveName',default='', help='File name for saved autoput')
 parser.add_argument('--binSize',type = int,default=2, help='Bin size in degrees')
 
-#args = parser.parse_args()
-#print(args)
+args = parser.parse_args()
+print(args)
 
 from fontTools.pens import statisticsPen
 import time
@@ -236,72 +236,9 @@ def  drama(fileSys,fileRef, /, *,binSize = 1,saveDir = '',saveName='',borderline
     print("finito V.10apr")
     return(absolut)
     
-#drama(args.fileS,args.fileR,binSize = args.binSize,saveName = args.saveName,saveDir = args.saveDir,borderline = args.borderline,vMax = args.vMax ,saveAsTif = not args.dontSaveAsTif,plotData = not args.dontPlotData,animatedGif = args.animatedGif )    
+drama(args.fileS,args.fileR,binSize = args.binSize,saveName = args.saveName,saveDir = args.saveDir,borderline = args.borderline,vMax = args.vMax ,saveAsTif = not args.dontSaveAsTif,plotData = not args.dontPlotData,animatedGif = args.animatedGif )    
 import os
 
-katalog = "C:\\Users\\ysrtxn\\Desktop\\barys\\" 
-os.chdir(katalog)
-drama("system.xvg","reference.xvg",saveDir="pupulek2")
-
-'''    
-import os
-          
-katalog = "C:\\Users\\ysrtxn\\Desktop\\barys\\gify\\" 
-os.chdir(katalog)
-import time
-
-mikuj = False
-#drama("system.xvg","reference.xvg",saveDir="\\pupulek\\")
-deviations = []
-
-for i in range(64,70):
-    start = time.time()
-    nameSS = "t_"+ str(i) + ".xvg"
-    nameRR = "t_" +str(1)+ ".xvg"   
-    #nameRR = "t_1.xvg"
-    bins = 3
-    devo = drama(nameSS,nameRR,binSize=3,saveDir= "\\PIcture7\\Duper_",borderline=20,saveAsTif=True,plotData=True,mixt=mikuj,tfs=15)
-    deviations.append([i,bins,devo])
-    end = time.time()
-    print("time=" + str(end - start))
-    
-
-import numpy as np 
-deviationsc = np.array(deviations)
-
-print(deviations)
-
-import csv
-
-def saveTsv(tsvfilename,arraytosave):                  # function that  saSes the data as tsv text file
-    fileTSV = open(tsvfilename,"w")        
-    tsvW =  csv.writer(fileTSV, delimiter='\t')  
-    #tsvW.writerows(arraytosave)         
-    for linia in arraytosave:    
-        tsvW.writerow(linia)            
-    fileTSV.close()
-    
-    
-saveTsv(katalog + str(mikuj) +"_"+str(bins)+"WildBerry2.tsv",deviations)
-  
-import matplotlib.pyplot as plt       # used to plot the data       
-import matplotlib.colors 
-tfs = 20  
-lfs = tfs + 2
-print(deviationsc[:,1]) 
-jadrodewiacji = np.ones(3)/3
-runigDevatios = np.convolve(deviationsc[:,2], jadrodewiacji, mode='valid')  
-runingX = np.convolve(deviationsc[:,0],jadrodewiacji,mode = 'valid')
-plt.scatter(deviationsc[:,0]+25,deviationsc[:,2],s=5,c="black")
-plt.plot(runingX+25,runigDevatios,color="black")
-plt.gca().set_aspect(420)
-plt.xticks([40,60,80],fontsize = tfs)
-plt.xlim(24, 96)
-plt.yticks([.12,0.16,0.2],fontsize = tfs)
-
-plt.xlabel("$T[^o C]$", fontsize = lfs)
-plt.ylabel("Absolute average", fontsize = lfs)
-
-plt.savefig(katalog+ "absolutPlotR2.jpg") 
-
-'''
+#katalog = "C:\\"
+#os.chdir(katalog)
+#drama("system.xvg","reference.xvg")
