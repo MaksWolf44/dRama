@@ -5,11 +5,14 @@ parser.add_argument('fileR',help = 'Refernce data file containing two columns of
 parser.add_argument('--borderline', type=float, help='Maxumum brighness level for difference plot')
 parser.add_argument('--vMax', type=float, help='Maximum brightnrss level for density polts') 
 parser.add_argument('--dontSaveAsTif', action=argparse.BooleanOptionalAction, help='Prevents saving 32 bit floating point tiff readeable by Fiji')
+parser.add_argument('--plotRaw', action=argparse.BooleanOptionalAction, help='Saves clasical Ramachndran plot')
 parser.add_argument('--dontPlotData', action=argparse.BooleanOptionalAction, help='Prevents saving graphical data plots')
 parser.add_argument('--animatedGif',action = argparse.BooleanOptionalAction, help='Saves as amimeted Gif file.  Each run of the script adds one frame to the animation.gif file')
 parser.add_argument('--saveDir',default='', help='The directory to witch the results are saved ')
 parser.add_argument('--saveName',default='', help='File name for saved autoput')
 parser.add_argument('--binSize',type = int,default=2, help='Bin size in degrees')
+parser.add_argument('--tfs',type = int,default=18, help='Font size for the plots')
+
 
 #args = parser.parse_args()
 #print(args)
@@ -234,7 +237,7 @@ def  drama(fileSys,fileRef, /, *,binSize = 1,saveDir = '',saveName='',borderline
     print("finito V.10apr")
     return(absolut)
     
-#drama(args.fileS,args.fileR,binSize = args.binSize,saveName = args.saveName,saveDir = args.saveDir,borderline = args.borderline,vMax = args.vMax ,saveAsTif = not args.dontSaveAsTif,plotData = not args.dontPlotData,animatedGif = args.animatedGif )    
+#drama(args.fileS,args.fileR,binSize = args.binSize,saveName = args.saveName,saveDir = args.saveDir,borderline = args.borderline,vMax = args.vMax ,saveAsTif = not args.dontSaveAsTif,plotData = not args.dontPlotData,animatedGif = args.animatedGif,plotRaw = args.plotRaw,tfs = args.tfs )    
 import os
 
 katalog = "C:\\Users\\ysrtxn\\Desktop\\barys\\testy"
