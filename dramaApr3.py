@@ -17,7 +17,6 @@ print(args)
 from fontTools.pens import statisticsPen
 import time
 from matplotlib.pyplot import plot
-from Tools.scripts.objgraph import flat
 from statistics import mode
 from matplotlib._text_helpers import layout
 
