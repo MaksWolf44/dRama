@@ -1,1 +1,3 @@
-dfdf
+This is an exemplary usage of the "drama" script.
+It loops through the files in the current directory and produces a plot of average absolute values.
+For testing, you can use the accompanying .xvg input files that its set up to work with. 
