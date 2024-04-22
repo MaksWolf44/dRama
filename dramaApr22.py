@@ -259,8 +259,9 @@ def  drama(fileSys,fileRef, /, *,binSize = 3,saveDir = '',saveName='',borderline
         plt.close("all")  
     return(absolut)
     
-#drama(args.fileS,args.fileR,binSize = args.binSize,saveName = args.saveName,saveDir = args.saveDir,borderline = args.borderline,vMax = args.vMax ,saveAsTif = not args.dontSaveAsTif,plotData = not args.dontPlotData,animatedGif = args.animatedGif,plotRaw = args.plotRaw,tfs = args.tfs )    
-import os
+drama(args.fileS,args.fileR,binSize = args.binSize,saveName = args.saveName,saveDir = args.saveDir,borderline = args.borderline,vMax = args.vMax ,saveAsTif = not args.dontSaveAsTif,plotData = not args.dontPlotData,animatedGif = args.animatedGif,plotRaw = args.plotRaw,tfs = args.tfs )    
+
+#import os
 
 
-drama("system.xvg","reference.xvg",plotRaw=True,animatedGif=False)
+#drama("system.xvg","reference.xvg",plotRaw=True,animatedGif=False)
