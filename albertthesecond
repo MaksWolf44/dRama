@@ -11,8 +11,9 @@ deviation = 0
 import os 
 
 katalog = os.getcwd()
-direct = os.path.join(katalog, )
-os.chdir(katalog)
+direct = os.path.join(katalog,example)
+print(direct)
+os.chdir(direct)
 import time
 
 deviations = []
