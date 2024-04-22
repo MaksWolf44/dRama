@@ -5,13 +5,13 @@ For testing, you can use the accompanying .xvg input files that its set up to wo
 '''
 
 
-from dramaApr19 import drama 
+from dramaApr22 import drama 
 deviation = 0
 
 import os 
 
 katalog = os.getcwd()
-direct = os.path.join(katalog,example)
+direct = os.path.join(katalog,'example')
 print(direct)
 os.chdir(direct)
 import time
@@ -62,5 +62,8 @@ plt.xlabel("$T[^o C]$", fontsize = lfs)
 plt.ylabel("SAD", fontsize = lfs)
 #plt.subplots_adjust(left=0.19)
 
-plt.savefig(katalog+ "SAD_PlotB1.png",bbox_inches='tight') 
+fileDirSave = os.path.join(direct,"SAD_plot.png")
+
+plt.savefig(fileDirSave ,bbox_inches='tight') 
 plt.cla()
+print("Saved under: " + fileDirSave)

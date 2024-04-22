@@ -262,6 +262,5 @@ def  drama(fileSys,fileRef, /, *,binSize = 3,saveDir = '',saveName='',borderline
 #drama(args.fileS,args.fileR,binSize = args.binSize,saveName = args.saveName,saveDir = args.saveDir,borderline = args.borderline,vMax = args.vMax ,saveAsTif = not args.dontSaveAsTif,plotData = not args.dontPlotData,animatedGif = args.animatedGif,plotRaw = args.plotRaw,tfs = args.tfs )    
 import os
 
-katalog = "C:\\Users\\ysrtxn\\Desktop\\barys\\testy"
-os.chdir(katalog)
+
 drama("system.xvg","reference.xvg",plotRaw=True,animatedGif=False)
