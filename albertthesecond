@@ -9,8 +9,9 @@ from dramaApr19 import drama
 deviation = 0
 
 import os 
-katalog = "C:\\Users\\ysrtxn\\Desktop\\barys\\gify\\" 
-#katalog = os.getcwd()
+
+katalog = os.getcwd()
+direct = os.path.join(katalog, )
 os.chdir(katalog)
 import time
 
