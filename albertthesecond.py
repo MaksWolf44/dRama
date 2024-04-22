@@ -5,7 +5,7 @@ For testing, you can use the accompanying .xvg input files that its set up to wo
 '''
 
 
-from dramaApr22 import drama 
+from dramaApr22p import drama 
 deviation = 0
 
 import os 
@@ -16,6 +16,7 @@ print(direct)
 os.chdir(direct)
 import time
 
+newDirSave = "r1"
 deviations = []
 
 for i in range(2,71):
@@ -24,7 +25,7 @@ for i in range(2,71):
     nameRR = "t_" +str(1)+ ".xvg"   
     #nameRR = "t_1.xvg"
     bins = 3
-    devo = drama(nameSS,nameRR,binSize=3,saveDir= "B2",borderline=0.003,animatedGif=False,plotRaw=False,plotData=False,tfs=15)
+    devo = drama(nameSS,nameRR,binSize=3,saveDir= newDirSave,borderline=0.003,animatedGif=False,plotRaw=True,plotData=True,tfs=15)
     deviations.append([i,devo])
     end = time.time()
     print("time=" + str(end - start))    
@@ -54,15 +55,15 @@ runigDevatios = np.convolve(deviationsc[:,1], jadrodewiacji, mode='valid')
 runingX = np.convolve(deviationsc[:,0],jadrodewiacji,mode = 'valid')
 plt.scatter(deviationsc[:,0]+scaleAxis,deviationsc[:,1],s=5,c="black")
 plt.plot(runingX+scaleAxis,runigDevatios,color="black")
-plt.gca().set_aspect(210)
-plt.xticks([40,60,80,100],fontsize = tfs)
-plt.xlim(29, 101)
-plt.yticks([.24,.32,.40],fontsize = tfs)
-plt.xlabel("$T[^o C]$", fontsize = lfs)
+#plt.gca().set_aspect(210)
+#plt.xticks([40,60,80,100],fontsize = tfs)
+#plt.xlim(29, 101)
+#plt.yticks([.24,.32,.40],fontsize = tfs)
+plt.xlabel(u'T [\u00B0]', fontsize = lfs)
 plt.ylabel("SAD", fontsize = lfs)
 #plt.subplots_adjust(left=0.19)
 
-fileDirSave = os.path.join(direct,"SAD_plot.png")
+fileDirSave = os.path.join(direct,newDirSave,"SAD_plot.png")
 
 plt.savefig(fileDirSave ,bbox_inches='tight') 
 plt.cla()
