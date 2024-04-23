@@ -1,7 +1,7 @@
 '''
 This is an exemplary usage of the "drama" script.
-It loops through the files in the current directory and produces a plot of som of absolute values.
-For testing, you can use the accompanying .xvg input files that its set up to work with. 
+It loops through the files in the current directory and produces a plot of the sum of absolute values.
+For testing, you can use the accompanying .xvg input files that it's set up to work with. 
 '''
 
 
@@ -10,8 +10,7 @@ deviation = 0
 
 import os 
 
-katalog = os.getcwd()
-direct = os.path.join(katalog,'example')
+direct = os.path.join(os.getcwd(),'example')            # creating path 
 print(direct)
 os.chdir(direct)
 import time
@@ -19,13 +18,13 @@ import time
 newDirSave = "r1"
 deviations = []
 
-for i in range(2,71):
+for i in range(2,71):                          # loops throuth the files in the "example" directory
     start = time.time()
     nameSS = "t_"+ str(i) + ".xvg"
     nameRR = "t_" +str(1)+ ".xvg"   
     #nameRR = "t_1.xvg"
     bins = 3
-    devo = drama(nameSS,nameRR,binSize=3,saveDir= newDirSave,borderline=0.003,animatedGif=False,plotRaw=True,plotData=True,tfs=15)
+    devo = drama(nameSS,nameRR,binSize=3,saveDir= newDirSave,borderline=0.003,animatedGif=False,plotRaw=True,plotData=True,tfs=15)           # this is the usage of the dramam function 
     deviations.append([i,devo])
     end = time.time()
     print("time=" + str(end - start))    
