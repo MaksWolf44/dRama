@@ -15,7 +15,7 @@ print(direct)
 os.chdir(direct)
 import time
 
-newDirSave = "r1"
+newDirSave = "results"
 deviations = []
 
 for i in range(2,71):                          # loops throuth the files in the "example" directory
