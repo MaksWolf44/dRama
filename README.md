@@ -1,6 +1,6 @@
 Super quick getting started to drama.py: 
 
-0 Instal Python 3 https://www.python.org/downloads/
+0 Instal Python 3 https://www.python.org/downloads/ in you dont have
 
 1 Copy all files to one folder on your computer
 
