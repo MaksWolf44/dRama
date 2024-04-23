@@ -5,7 +5,7 @@ For testing, you can use the accompanying .xvg input files that it's set up to w
 '''
 
 
-from dramaApr22p import drama 
+from drama import drama 
 deviation = 0
 
 import os 
