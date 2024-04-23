@@ -11,4 +11,7 @@ python (or python3 in linux) albertthesecond.py
 provided that you copied all the folder structure and that the command line is opened directory containing the script.
 
 
+More detailed instructions are given in the instructions.pdf file
+
+
   
