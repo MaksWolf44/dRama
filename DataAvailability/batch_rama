@@ -1,0 +1,14 @@
+j=0
+k=1000
+
+for i in {1..70}
+do
+
+gmx rama -f ann.xtc -s ann.tpr -b ${j} -e ${k} -o t_${i}
+j=$(($j+1000))
+k=$(($k+1000))
+
+done
+
+
+
